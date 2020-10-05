@@ -29,7 +29,7 @@ p {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  left: 48%;
+  left: 50%;
 }
 
 .btn {
@@ -58,41 +58,14 @@ p {
   outline: 0;
 }
 
-.fifth {
-  border-color: purple;
-  border-radius: 0;
-  color: purple;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: color 150ms ease-in-out;
-
-  /* &:after {
-    
-  }
-
-  &:hover {
-    color: #fff;
-    &:after {
-      width: 110%;
-    }
-  } */
+.history-list {
+  height: 300px;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-.fifth:after {
-  content: "";
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 100%;
-  background: purple;
-  z-index: -1;
-  transition: width 150ms ease-in-out;
-}
-
-.fifth:hover {
-  color: #fff;
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ .history-list::-webkit-scrollbar {
+  display: none;
 }

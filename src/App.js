@@ -63,7 +63,7 @@ class App extends React.Component {
           case 0:
             // no bet
             this.setState({
-              resultsHistory: [...resultsHistory, result],
+              resultsHistory: [result],
               loading: false
             })
             return;
@@ -160,9 +160,11 @@ class App extends React.Component {
           <button className='btn' onClick={() => this.startNewGame()}>Zagraj ponownie</button>
           <br />
           Historia twoich zakładów:
-          {resultsHistory.map((result, index) => {
-            return <p>ilość oczek:{result}; zakład, że będzie {betsHistory[index] === -1 ? 'mniej' : 'więcej'}</p>
-          })}
+          <div className='history-list'>
+            {resultsHistory.map((result, index) => {
+              return <p>ilość oczek:{result}; zakład, że będzie {betsHistory[index] === -1 ? 'mniej' : 'więcej'}</p>
+            })}
+          </div>
         </React.Fragment>
       )
 
